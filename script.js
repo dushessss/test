@@ -13,6 +13,8 @@ send.onclick = function () {
 
     })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            url.innerText = data.link
+        })
         .catch(error => console.log('error', error));
 };
