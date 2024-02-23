@@ -14,7 +14,10 @@ send.onclick = function () {
     })
         .then(response => response.json())
         .then(data => {
-            url.innerText = data.data.link
+            const a = document.createElement('a');
+            a.setAttribute("href", data.data.link);
+            a.appendChild(document.createTextNode(`Link`));
+            url.appendChild(a);
         })
         .catch(error => console.log('error', error));
 };
