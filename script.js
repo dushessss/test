@@ -12,9 +12,7 @@ send.onclick = function () {
         body: formData,
 
     })
-        .then(response => response.json())
-        .then(data => data.json())
-        .then(data => {
+        .then(data => data.json()).then(data => {
             url.innerText = data.data.link
         })
         .catch(error => console.log('error', error));
