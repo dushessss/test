@@ -13,7 +13,7 @@ send.onclick = function () {
 
     })
         .then(response => response.json())
-        .then(data => data.json)
+        .then(data => data.json())
         .then(data => {
             url.innerText = data.data.link
         })
